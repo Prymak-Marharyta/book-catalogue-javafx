@@ -1,0 +1,5 @@
+app\BookNotFoundException.class
+app\Catalogue.class
+app\BookGUI.class
+app\Publication.class
+app\Book.class

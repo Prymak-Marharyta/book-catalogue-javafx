@@ -38,6 +38,14 @@ public class BookGUI extends Application {
         Button searchButton = new Button("Пошук");
         Button resetButton = new Button("Скинути параметри пошуку");
 
+        addButton.setPrefWidth(170);
+        removeButton.setPrefWidth(170);
+        updateButton.setPrefWidth(170);
+        saveButton.setPrefWidth(170);
+        loadButton.setPrefWidth(170);
+        searchButton.setPrefWidth(170);
+        resetButton.setPrefWidth(170);
+
         outputArea = new TextArea();
         outputArea.setEditable(false);
         outputArea.setPrefHeight(250);
@@ -63,16 +71,19 @@ public class BookGUI extends Application {
         form.add(yearField, 1, 4);
 
         GridPane buttons = new GridPane();
-        buttons.setHgap(10);
-        buttons.setVgap(10);
+        buttons.setHgap(15);
+        buttons.setVgap(15);
+        buttons.setPadding(new Insets(10, 0, 10, 0));
 
         buttons.add(addButton, 0, 0);
         buttons.add(removeButton, 1, 0);
         buttons.add(updateButton, 2, 0);
+
         buttons.add(saveButton, 0, 1);
         buttons.add(loadButton, 1, 1);
         buttons.add(searchButton, 2, 1);
-        buttons.add(resetButton, 0, 2);
+
+        buttons.add(resetButton, 1, 2);
 
         VBox root = new VBox(10, form, buttons, outputArea);
         root.setPadding(new Insets(10));
